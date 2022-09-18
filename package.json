@@ -1,0 +1,15 @@
+{
+  "name": "trabajo-04-chat-con-node-js",
+  "version": "1.0.0",
+  "description": "Chat con Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Emmanuel Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.2"
+  }
+}
