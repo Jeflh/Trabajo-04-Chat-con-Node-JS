@@ -9,18 +9,18 @@ app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
-io.on('connection', (socket) => {
-  socket.on('chat message', (user, msg) => {
-    console.log(user + ": " + msg);
-  });
-});
-
 server.listen(process.env.PORT || 3000, () => {
   console.log('Escuchando en el puerto', process.env.PORT || 3000);
 });
 
 io.on('connection', (socket) => {
+  console.log('User: ', socket.id, ' connected');
+
+  socket.on('disconnect', () => {
+    console.log('User: ', socket.id, ' disconnected');
+  });
+  
   socket.on('chat message', (user, msg) => {
-    io.emit('chat message', user, msg);
+    console.log(user + ": " + msg);
   });
 });

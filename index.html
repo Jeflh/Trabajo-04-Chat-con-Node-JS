@@ -8,7 +8,7 @@
         padding-bottom: 3rem;
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
           Arial, sans-serif;
-        background-color: #D6D5A8;
+        background-color: #d6d5a8;
         color: #fff;
       }
 
@@ -41,7 +41,7 @@
         margin: 0.25rem;
       }
       #form > button {
-        background: #1B2430;
+        background: #1b2430;
         border: none;
         padding: 0 1rem;
         margin: 0.25rem;
@@ -61,7 +61,7 @@
         padding: 0.5rem 1rem;
       }
       #messages > li:nth-child(odd) {
-        background: #51557E;
+        background: #51557e;
       }
       #onlineList {
         position: fixed;
@@ -74,7 +74,6 @@
         text-align: center;
       }
       .online {
-        
         background-color: rgb(41, 199, 41);
         border-radius: 5px;
         padding: 4px;
@@ -89,7 +88,7 @@
         padding: 0;
         margin: 0;
         font-size: 30px;
-        background-color: #1B2430;
+        background-color: #1b2430;
       }
     </style>
   </head>
@@ -100,7 +99,7 @@
       <li class="online-titulo">Usuarios</li>
     </ul>
     <form id="form" action="">
-      <input id="user" type="text" placeholder="Nombre de usuario">
+      <input id="user" type="text" placeholder="Nombre de usuario" />
       <input id="input" autocomplete="off" placeholder="Mensaje" /><button>Enviar</button>
     </form>
 
@@ -126,12 +125,12 @@
         item.textContent = user + ": " + msg;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
-        
+
         var listOnline = document.getElementsByClassName("online");
 
         var existe = false;
         for (var i = 0; i < listOnline.length; i++) {
-          if(listOnline[i].textContent === user){
+          if (listOnline[i].textContent === user) {
             existe = true;
           }
         }
@@ -140,7 +139,7 @@
           itemOnline.textContent = user;
           itemOnline.classList.add("online");
           document.getElementById("onlineList").appendChild(itemOnline);
-        }          
+        }
       });
     </script>
   </body>
