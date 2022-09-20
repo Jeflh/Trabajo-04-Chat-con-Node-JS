@@ -4,7 +4,7 @@
   "description": "Chat con Node.js",
   "main": "index.js",
   "scripts": {
-    "start": "node /index.js"
+    "start": "node index.js"
   },
   "author": "Emmanuel Fernandez",
   "license": "ISC",
